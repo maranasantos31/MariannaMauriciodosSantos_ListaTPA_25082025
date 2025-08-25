@@ -1,0 +1,35 @@
+using System;
+
+namespace MediaNotas
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int nota, soma, num, media;
+            num = 1;
+            soma = 0;
+
+            while (num <= 10)
+            {
+                Console.WriteLine($"Informe a {num}ª nota:"); 
+
+                nota = int.Parse(Console.ReadLine());
+
+                if (nota >= 0 && nota <= 10)
+                {
+                    soma += nota;
+                    num++; 
+                }
+                else
+                {
+                    Console.WriteLine("Nota inválida! Digite novamente.");
+                }
+            }
+
+            media = soma / 10; 
+
+            Console.WriteLine($"A média das 10 notas é: {media}");
+        }
+    }
+}
