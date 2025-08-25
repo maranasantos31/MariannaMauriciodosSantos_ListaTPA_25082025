@@ -1,0 +1,28 @@
+using System;
+
+namespace MaiorNumero
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, maior, c;
+            Console.WriteLine("Digite o 1º número:");
+            n = int.Parse(Console.ReadLine());
+            maior = n;
+
+            for (c = 2; c <= 15; c++)
+            {
+                Console.WriteLine($"Digite o {c}º número:");
+                n = int.Parse(Console.ReadLine());
+
+                if (n > maior)
+                {
+                    maior = n;
+                }
+            }
+
+            Console.WriteLine("O maior número digitado foi: {maior}");
+        }
+    }
+}
