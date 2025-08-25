@@ -1,0 +1,25 @@
+using System;
+
+namespace MultiplosDez
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a;
+            for (a = 1; a <= 100; a++)
+            {
+                Console.Write(a); 
+
+                if (a % 10 == 0) 
+                {
+                    Console.WriteLine(" ~ Múltiplo de 10");
+                }
+                else
+                {
+                    Console.WriteLine();
+                }
+            }
+        }
+    }
+}
