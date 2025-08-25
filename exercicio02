@@ -1,28 +1,39 @@
 using System;
 
-namespace MaiorNumero
+namespace Decrescente_impar
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int n, maior, c;
-            Console.WriteLine("Digite o 1º número:");
-            n = int.Parse(Console.ReadLine());
-            maior = n;
+            int a, b;
 
-            for (c = 2; c <= 15; c++)
+            Console.WriteLine("sistema de impares decrecentes!");
+            Console.WriteLine("Digite o primeiro número: ");
+            a = int.Parse(Console.ReadLine());
+
+            
+            do
             {
-                Console.WriteLine($"Digite o {c}º número:");
-                n = int.Parse(Console.ReadLine());
+                Console.WriteLine("Digite o segundo número: ");
+                b = int.Parse(Console.ReadLine());
 
-                if (n > maior)
+                if (b >= a)
                 {
-                    maior = n;
+                    Console.WriteLine("\n O segundo número digitado deve ser MENOR que o primeiro!\n");
+                }
+
+            } while (b >= a); 
+
+            Console.WriteLine($"\n Os números ímpares entre {a} e {b} (em ordem decrescente):");
+
+            for (int c = a; c >= b; c--)
+            {
+                if (c % 2 != 0)
+                {
+                    Console.WriteLine(c);
                 }
             }
-
-            Console.WriteLine("O maior número digitado foi: {maior}");
         }
     }
 }
