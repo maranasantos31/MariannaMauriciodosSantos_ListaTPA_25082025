@@ -1,0 +1,43 @@
+using System;
+
+namespace SalarioOperario
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int cd, hr, slmin, plussl;
+            plussl = 0;
+
+            string resposta;
+
+            do
+            {
+                Console.Write("Digite o código do operário: ");
+                cd = int.Parse(Console.ReadLine());
+
+                Console.Write("Digite o número de horas trabalhadas: ");
+                hr = int.Parse(Console.ReadLine());
+
+                if (hr > 50)
+                {
+                    plussl= hr - 50;
+                    slmin = 50 * 10 + plussl * 20;
+                }
+                else
+                {
+                    slmin = hr * 10;
+                }
+
+                int salarioExcedente = plussl * 20;
+
+                Console.WriteLine($"\nSalário total do operário {cd}: R$ {slmin}");
+                Console.WriteLine($"Salário excedente: R$ {salarioExcedente}\n");
+
+                Console.Write("Deseja encerrar o programa? (S - sim/N - não): ");
+                resposta = Console.ReadLine().ToUpper();
+
+            } while (resposta != "S");
+        }
+    }
+}
