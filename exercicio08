@@ -1,0 +1,23 @@
+using System;
+
+namespace Fatorial
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, fato, b;
+            Console.Write("Digite um número para calcular o fatorial: ");
+            a = int.Parse(Console.ReadLine());
+
+            fato = 1;
+
+            for (b = 1; b <= a; b++)
+            {
+                fato *= b;
+            }
+
+            Console.WriteLine($"\nO fatorial de {a} é: {fato}");
+        }
+    }
+}
