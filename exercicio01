@@ -1,0 +1,24 @@
+using System;
+
+namespace MyApp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int num, A, B;
+
+            A = 11;
+            B = 250;
+            Console.WriteLine("Abaixo a sequencia de numeros de 11 até 250: ");
+            for (num = A; num <= B; num++)
+            {
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine(num);
+                }
+            }
+
+        }
+    }
+}
