@@ -1,0 +1,46 @@
+using System;
+
+namespace ContagemNumeros
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int par, impar, positivo, negativo, num;
+            par = 0;
+            impar = 0;
+            positivo = 0;
+            negativo = 0;
+
+            string resposta;
+
+            while (true)
+            {
+                Console.Write("Digite número: ");
+                num = int.Parse(Console.ReadLine());
+
+                if (num % 2 == 0)
+                    par++;
+                else
+                    impar++;
+
+                if (num >= 0)
+                    positivo++;
+                else
+                    negativo++;
+
+                Console.Write("Deseja encerrar o programa? (S - para sim /N - para não): ");
+                resposta = Console.ReadLine().ToUpper();
+
+                if (resposta == "S")
+                    break;
+            }
+
+            Console.WriteLine("\n--- RESULTADOS ---");
+            Console.WriteLine($"Quantidade de pares: {par}");
+            Console.WriteLine($"Quantidade de ímpares: {impar}");
+            Console.WriteLine($"Quantidade de positivos: {positivo}");
+            Console.WriteLine($"Quantidade de negativos: {negativo}");
+        }
+    }
+}
