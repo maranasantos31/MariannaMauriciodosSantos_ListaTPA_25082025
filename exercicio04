@@ -1,0 +1,39 @@
+using System;
+
+namespace ContarImpares
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c;
+            Console.WriteLine("Digite o primeiro número:");
+            a = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo número:");
+            b = int.Parse(Console.ReadLine());
+
+            int contador = 0; // inicializa o contador
+            c = a;
+
+            if (a <= b)
+            {
+                while (c <= b)
+                {
+                    if (c % 2 != 0) contador++;
+                    c++;
+                }
+            }
+            else
+            {
+                while (c >= b)
+                {
+                    if (c % 2 != 0) contador++;
+                    c--;
+                }
+            }
+
+            Console.WriteLine($"\nQuantidade de números ímpares: {contador}");
+        }
+    }
+}
